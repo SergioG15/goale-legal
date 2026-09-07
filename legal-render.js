@@ -54,6 +54,10 @@ const section = (s) => {
   if (s.li?.length) out += `<ul>${s.li.map((x) => `<li>${withLinks(x)}</li>`).join("")}</ul>`;
   if (s.p2) out += `<p>${withLinks(s.p2)}</p>`;
   if (s.p3) out += `<p>${withLinks(s.p3)}</p>`;
+  // p4 existe desde el 07-09: la política necesitó un párrafo más en la sección
+  // de partidas en línea para contar los cuadros de torneo. Una sección que no
+  // lo traiga sigue pintándose igual.
+  if (s.p4) out += `<p>${withLinks(s.p4)}</p>`;
   return out;
 };
 

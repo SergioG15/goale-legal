@@ -68,14 +68,15 @@ export const LEGAL_LINKS = {
 export const PRIVACY = {
 "es": {
  "title": "Política de Privacidad de GOALÉ",
- "updated": "Última actualización: 6 de septiembre de 2026",
+ "updated": "Última actualización: 7 de septiembre de 2026",
  "intro": "Esta política explica qué datos se recogen al usar <strong>GOALÉ</strong> (el \"juego\"), un juego de fútbol por turnos desarrollado de forma independiente por Sergio González (\"nosotros\", \"el desarrollador\"). Al usar el juego, aceptas las prácticas descritas aquí.",
  "sumH": "Resumen rápido",
  "sum": [
   "<strong>Si juegas solo contra la máquina, no se nos envía absolutamente nada.</strong> Tu equipo, tu escudo y tus estadísticas se quedan en tu aparato.",
   "<strong>No hay anuncios, ni analítica, ni ningún SDK de terceros</strong> dentro del juego. No sabemos cuánto juegas, ni desde dónde, ni qué otras apps tienes.",
   "Si juegas <strong>en línea</strong>, se crea una cuenta automáticamente. <strong>No se te pide correo, ni contraseña, ni nombre real</strong>: la cuenta es un número al azar.",
-  "En esa cuenta guardamos lo que el modo en línea necesita para funcionar: tu nombre de club, el aspecto de tu equipo, tu ELO y tus partidos jugados y ganados.",
+  "En esa cuenta guardamos lo que el modo en línea necesita para funcionar: tu <strong>alias</strong>, tu nombre de club, el aspecto de tu equipo, tu ELO, tus partidos y tu palmarés de torneos.",
+  "Si pones <strong>bandera</strong>, la eliges tú a mano de una lista y es opcional: <strong>no deducimos tu país</strong> ni de tu conexión ni de tu aparato.",
   "Las <strong>compras</strong> las cobra Google Play o Steam. Nosotros no vemos, ni recibimos, ni guardamos ningún dato de tu tarjeta."
  ],
  "s1": {
@@ -93,9 +94,12 @@ export const PRIVACY = {
   "p": "La primera vez que entras en el modo en línea, el servidor te crea una cuenta <strong>sin pedirte nada</strong>: no hay registro, ni correo, ni contraseña. La cuenta es un identificador aleatorio, y tu aparato guarda una clave secreta que sirve para volver a entrar en ella. Concretamente, en nuestro servidor se guarda:",
   "li": [
    "El identificador aleatorio de la cuenta y la fecha en que se creó.",
+   "Tu <strong>alias</strong>, que es como te llaman a ti — no a tu club — en la clasificación y en los cuadros de torneo. Lo eliges la primera vez que entras al modo en línea y <strong>no se puede cambiar después</strong>: un nombre que cambia cada tarde no significaría nada en una clasificación.",
    "El <strong>nombre de tu club</strong>, que es el que ven tus rivales. Lo eliges tú en MI EQUIPO y puedes cambiarlo cuando quieras.",
    "El aspecto de tu club: la equipación, el escudo y el nombre y aspecto de tus tres futbolistas. Esto es lo que hace que tu rival te vea como te has vestido, y que tu equipo te siga si juegas desde otro aparato.",
-   "Tu <strong>ELO</strong> y el número de partidos jugados y ganados.",
+   "Tu <strong>ELO</strong> y tus contadores de juego: partidos jugados, ganados y empatados, tu racha actual y la mejor que hayas tenido.",
+   "Tu <strong>palmarés de torneos</strong>: cuántos has jugado, cuántos has ganado, en cuántos fuiste finalista y en cuántos subiste al podio. Es lo que llena la vitrina de tu perfil.",
+   "La <strong>bandera</strong> que hayas elegido en tu perfil, si eliges alguna. Es opcional, la eliges tú a mano de una lista y puedes cambiarla cuando quieras: <strong>no se deduce de tu conexión, de tu aparato ni del idioma de tu móvil</strong>.",
    "El <strong>nombre comercial de cada aparato</strong> vinculado a la cuenta (por ejemplo, \"OnePlus Nord 3 5G\"), y la fecha en que se vinculó. Sirve para que puedas reconocerlos en la lista y desvincular el que hayas perdido."
   ],
   "p2": "<strong>La clave secreta de tu aparato no se guarda en el servidor.</strong> Solo se guarda su huella criptográfica (SHA-256), que sirve para comprobarla pero no permite reconstruirla: alguien que se llevara una copia entera de nuestra base de datos no podría entrar en ninguna cuenta con ella.",
@@ -105,7 +109,8 @@ export const PRIVACY = {
   "h": "3. Partidas en línea y clasificación",
   "p": "Mientras juegas una partida en línea, tu aparato envía al servidor las órdenes de cada ronda (qué jugador mueve, adónde, y qué hace con el balón). El servidor las necesita para arbitrar la partida y para que los dos jugadores vean exactamente lo mismo. <strong>Esas órdenes viven lo que dura la partida y no se guardan después</strong>: cuando la sala se cierra, desaparecen.",
   "p2": "Al terminar una partida <strong>emparejada</strong> se actualizan tu ELO y tu contador de partidos. Las partidas con código de sala — las que juegas con alguien que conoces — <strong>no puntúan</strong> y no dejan ningún registro.",
-  "p3": "Al buscar rival, el servidor compara <strong>en ese momento</strong> la dirección desde la que te conectas con la de los demás en cola, para no emparejar a alguien consigo mismo desde dos aparatos. Esa dirección <strong>no se guarda en la base de datos, no se escribe en ningún registro y no se envía a nadie</strong>: se usa en el instante de emparejar y se descarta."
+  "p3": "Al buscar rival, el servidor compara <strong>en ese momento</strong> la dirección desde la que te conectas con la de los demás en cola, para no emparejar a alguien consigo mismo desde dos aparatos. Esa dirección <strong>no se guarda en la base de datos, no se escribe en ningún registro y no se envía a nadie</strong>: se usa en el instante de emparejar y se descarta.",
+  "p4": "Si juegas un <strong>torneo</strong> o la <strong>copa semanal</strong>, el servidor guarda el cuadro mientras esa competición existe: en tu plaza quedan tu alias, tu bandera, tu ELO y el aspecto de tu club, y el resultado de cada cruce. Es lo que permite que el cuadro siga en pie de una ronda a la siguiente y que se pueda mirar quién ganó qué. Los cuadros ya terminados se borran del servidor pasado un tiempo, salvo los de la copa semanal, que se conservan porque son el palmarés de sus campeones."
  },
  "s4": {
   "h": "4. Jugar en varios aparatos",
@@ -121,12 +126,12 @@ export const PRIVACY = {
  "s6": {
   "h": "6. Sin anuncios, sin analítica, sin terceros",
   "p": "GOALÉ <strong>no muestra anuncios</strong> y <strong>no incorpora ninguna herramienta de analítica, medición, atribución ni informes de fallos</strong>. No hay AdMob, ni Firebase, ni Google Analytics, ni Unity Ads, ni ningún SDK equivalente.",
-  "p2": "Esto significa que no recogemos tu identificador de publicidad, no sabemos cuánto tiempo juegas, ni a qué hora, ni desde qué país, ni qué otras aplicaciones tienes instaladas. Los únicos datos que salen de tu aparato son los que aparecen en las secciones 2, 3 y 4, y solo si decides jugar en línea."
+  "p2": "Esto significa que no recogemos tu identificador de publicidad, no sabemos cuánto tiempo juegas, ni a qué hora, ni desde qué país — la bandera de tu perfil la pones tú a mano y puede no tener nada que ver con dónde estás —, ni qué otras aplicaciones tienes instaladas. Los únicos datos que salen de tu aparato son los que aparecen en las secciones 2, 3 y 4, y solo si decides jugar en línea."
  },
  "s7": {
   "h": "7. Dónde se guardan los datos y cuánto tiempo",
   "p": "El servidor de GOALÉ es un servidor privado alojado en <strong>OVHcloud (Francia, Unión Europea)</strong>, gestionado únicamente por el desarrollador. Los datos se guardan en un fichero de base de datos SQLite en ese servidor. Toda la comunicación entre el juego y el servidor va <strong>cifrada (TLS / wss://)</strong>.",
-  "p2": "Los datos de tu cuenta se conservan mientras la cuenta exista. <strong>Una cuenta que no se use durante dos años se borra automáticamente</strong>, con todo lo que contiene. Puedes pedir que se borre antes en cualquier momento (sección 8).",
+  "p2": "Los datos de tu cuenta se conservan <strong>mientras la cuenta exista</strong>: son justo lo que hace que tu equipo, tu clasificación y tu palmarés sigan ahí cuando vuelvas, aunque pases meses sin jugar. No hay ningún borrado automático por inactividad. Si quieres que desaparezca, se borra en cuanto lo pidas (sección 8).",
   "p3": "No vendemos, alquilamos ni cedemos tus datos a nadie. No hay terceros con acceso a la base de datos."
  },
  "s8": {
@@ -137,7 +142,7 @@ export const PRIVACY = {
  },
  "s9": {
   "h": "9. Menores de edad",
-  "p": "GOALÉ no está dirigido a menores de 13 años y no recoge conscientemente datos de menores de esa edad. El juego no pide ningún dato personal en ningún momento, y el modo en línea no tiene chat ni ninguna forma de que dos jugadores intercambien texto libre: lo único que un rival ve de ti es el nombre de tu club y el aspecto de tu equipo.",
+  "p": "GOALÉ no está dirigido a menores de 13 años y no recoge conscientemente datos de menores de esa edad. El juego no pide ningún dato personal en ningún momento, y el modo en línea no tiene chat ni ninguna forma de que dos jugadores intercambien texto libre: lo único que un rival ve de ti es tu alias, el nombre de tu club, la bandera que hayas elegido y el aspecto de tu equipo.",
   "p2": "Si eres madre, padre o tutor y crees que un menor a tu cargo ha creado una cuenta, escríbenos y la borraremos."
  },
  "s10": {
@@ -152,14 +157,15 @@ export const PRIVACY = {
 },
 "en": {
  "title": "GOALÉ Privacy Policy",
- "updated": "Last updated: 6 September 2026",
+ "updated": "Last updated: 7 September 2026",
  "intro": "This policy explains what data is collected when you use <strong>GOALÉ</strong> (the \"game\"), a turn-based football game developed independently by Sergio González (\"we\", \"the developer\"). By using the game, you accept the practices described here.",
  "sumH": "Quick summary",
  "sum": [
   "<strong>If you only play against the computer, nothing whatsoever is sent to us.</strong> Your team, your crest and your stats stay on your device.",
   "<strong>There are no ads, no analytics and no third-party SDKs</strong> in the game. We don't know how much you play, where from, or what other apps you have.",
   "If you play <strong>online</strong>, an account is created automatically. <strong>You are never asked for an email, a password or a real name</strong>: the account is a random number.",
-  "That account holds what online play needs to work: your club name, your team's appearance, your ELO and your matches played and won.",
+  "That account holds what online play needs to work: your <strong>alias</strong>, your club name, your team's appearance, your ELO, your matches and your tournament record.",
+  "If you set a <strong>flag</strong>, you pick it by hand from a list and it is optional: <strong>we do not infer your country</strong> from your connection or your device.",
   "<strong>Purchases</strong> are charged by Google Play or Steam. We never see, receive or store any of your card details."
  ],
  "s1": {
@@ -177,9 +183,12 @@ export const PRIVACY = {
   "p": "The first time you enter online play, the server creates an account for you <strong>without asking for anything</strong>: no sign-up, no email, no password. The account is a random identifier, and your device stores a secret key that lets it get back in. Specifically, our server stores:",
   "li": [
    "The account's random identifier and the date it was created.",
+   "Your <strong>alias</strong>, which is what you — not your club — are called in the ranking and in tournament brackets. You choose it the first time you enter online play and <strong>it cannot be changed afterwards</strong>: a name that changes every afternoon would mean nothing in a ranking.",
    "Your <strong>club name</strong>, which is what your opponents see. You choose it in MY TEAM and can change it whenever you like.",
    "Your club's appearance: the kit, the crest, and the name and look of your three footballers. This is what lets your opponent see you as you dressed, and lets your team follow you if you play from another device.",
-   "Your <strong>ELO</strong> and the number of matches played and won.",
+   "Your <strong>ELO</strong> and your game counters: matches played, won and drawn, your current streak and the best streak you have had.",
+   "Your <strong>tournament record</strong>: how many you have played, how many you have won, in how many you were runner-up and in how many you reached the podium. It is what fills the trophy case in your profile.",
+   "The <strong>flag</strong> you have chosen in your profile, if you choose one. It is optional, you pick it by hand from a list and you can change it whenever you like: <strong>it is not inferred from your connection, your device or your phone's language</strong>.",
    "The <strong>commercial name of each device</strong> linked to the account (for example, \"OnePlus Nord 3 5G\"), and the date it was linked. This exists so you can recognise them in the list and unlink one you have lost."
   ],
   "p2": "<strong>Your device's secret key is not stored on the server.</strong> Only its cryptographic hash (SHA-256) is kept, which can verify the key but cannot reconstruct it: someone who walked off with a complete copy of our database could not get into a single account with it.",
@@ -189,7 +198,8 @@ export const PRIVACY = {
   "h": "3. Online matches and ranking",
   "p": "While you play an online match, your device sends the server your orders for each round (which player moves, where to, and what they do with the ball). The server needs them to referee the match and to make sure both players see exactly the same thing. <strong>Those orders live only as long as the match and are not kept afterwards</strong>: when the room closes, they are gone.",
   "p2": "When a <strong>matchmade</strong> game ends, your ELO and match counters are updated. Games played with a room code — the ones you play with someone you know — <strong>do not count towards the ranking</strong> and leave no record.",
-  "p3": "When looking for an opponent, the server compares <strong>at that moment</strong> the address you are connecting from with those of everyone else in the queue, so that nobody is paired against themselves from two devices. That address is <strong>not stored in the database, not written to any log and not sent to anyone</strong>: it is used at the instant of pairing and discarded."
+  "p3": "When looking for an opponent, the server compares <strong>at that moment</strong> the address you are connecting from with those of everyone else in the queue, so that nobody is paired against themselves from two devices. That address is <strong>not stored in the database, not written to any log and not sent to anyone</strong>: it is used at the instant of pairing and discarded.",
+  "p4": "If you play a <strong>tournament</strong> or the <strong>weekly cup</strong>, the server keeps the bracket for as long as that competition exists: your seat holds your alias, your flag, your ELO and your club's appearance, along with the result of each tie. That is what lets the bracket stand from one round to the next and lets anyone see who beat whom. Finished brackets are deleted from the server after a while, except those of the weekly cup, which are kept because they are their champions' record."
  },
  "s4": {
   "h": "4. Playing on several devices",
@@ -205,12 +215,12 @@ export const PRIVACY = {
  "s6": {
   "h": "6. No ads, no analytics, no third parties",
   "p": "GOALÉ <strong>shows no advertising</strong> and <strong>contains no analytics, measurement, attribution or crash-reporting tooling</strong>. There is no AdMob, no Firebase, no Google Analytics, no Unity Ads and no equivalent SDK.",
-  "p2": "This means we do not collect your advertising identifier, and we do not know how long you play, at what time, from which country, or what other applications you have installed. The only data that leaves your device is what appears in sections 2, 3 and 4, and only if you choose to play online."
+  "p2": "This means we do not collect your advertising identifier, and we do not know how long you play, at what time, or from which country — the flag in your profile is one you set by hand, and it may have nothing to do with where you are — nor what other applications you have installed. The only data that leaves your device is what appears in sections 2, 3 and 4, and only if you choose to play online."
  },
  "s7": {
   "h": "7. Where data is stored and for how long",
   "p": "The GOALÉ server is a private server hosted at <strong>OVHcloud (France, European Union)</strong> and managed solely by the developer. Data is stored in a SQLite database file on that server. All communication between the game and the server is <strong>encrypted (TLS / wss://)</strong>.",
-  "p2": "Your account data is kept for as long as the account exists. <strong>An account unused for two years is deleted automatically</strong>, along with everything in it. You can ask for it to be deleted sooner at any time (section 8).",
+  "p2": "Your account data is kept <strong>for as long as the account exists</strong>: it is precisely what keeps your team, your ranking and your record waiting for you when you come back, even after months away. There is no automatic deletion for inactivity. If you want it gone, it is deleted as soon as you ask (section 8).",
   "p3": "We do not sell, rent or share your data with anyone. No third party has access to the database."
  },
  "s8": {
@@ -221,7 +231,7 @@ export const PRIVACY = {
  },
  "s9": {
   "h": "9. Children",
-  "p": "GOALÉ is not directed at children under 13 and does not knowingly collect data from children of that age. The game never asks for any personal data, and online play has no chat and no way for two players to exchange free text: all an opponent sees of you is your club name and your team's appearance.",
+  "p": "GOALÉ is not directed at children under 13 and does not knowingly collect data from children of that age. The game never asks for any personal data, and online play has no chat and no way for two players to exchange free text: all an opponent sees of you is your alias, your club name, the flag you have chosen and your team's appearance.",
   "p2": "If you are a parent or guardian and believe a child in your care has created an account, write to us and we will delete it."
  },
  "s10": {
@@ -246,7 +256,7 @@ export const PRIVACY = {
 export const ERASE = {
 "es": {
  "title": "Eliminar mis datos de GOALÉ",
- "updated": "Última actualización: 6 de septiembre de 2026",
+ "updated": "Última actualización: 7 de septiembre de 2026",
  "intro": "Esta página explica cómo borrar los datos de <strong>GOALÉ</strong>. Hay dos sitios donde puede haber datos tuyos, y se borran por separado.",
  "s1": {
   "h": "1. Lo que hay en tu aparato",
@@ -263,21 +273,23 @@ export const ERASE = {
  },
  "s3": {
   "h": "3. Borrar tu cuenta del servidor",
-  "p": "Si has jugado en línea, existe una cuenta con tu nombre de club, el aspecto de tu equipo, tu ELO y tus partidos. Para borrarla, escríbenos desde cualquier correo a la dirección del recuadro con el asunto <strong>\"Borrar mi cuenta\"</strong> e incluye:",
+  "p": "Si has jugado en línea, existe una cuenta con tu alias, tu nombre de club, el aspecto de tu equipo, tu ELO, tus partidos y tu palmarés de torneos. Para borrarla, escríbenos desde cualquier correo a la dirección del recuadro con el asunto <strong>\"Borrar mi cuenta\"</strong> e incluye:",
   "li": [
+   "Tu <strong>alias</strong>, el que elegiste al entrar por primera vez al modo en línea.",
    "Tu <strong>nombre de club</strong>, tal y como aparece en MI EQUIPO.",
-   "El <strong>identificador de tu cuenta</strong>, si puedes verlo: está en Ajustes → Cuenta, dentro del juego.",
    "El nombre del aparato o aparatos desde los que juegas."
   ],
-  "p2": "Con el nombre de club basta en la mayoría de los casos; el identificador solo hace falta si hubiera dos clubes con el mismo nombre. Podemos pedirte que confirmes desde el propio juego antes de borrar, para que nadie pueda borrar la cuenta de otro."
+  "p2": "Con el alias y el nombre de club basta para encontrarte. Podemos pedirte que confirmes desde el propio juego antes de borrar, para que nadie pueda borrar la cuenta de otro."
  },
  "s4": {
   "h": "4. Qué se borra exactamente",
   "p": "Al borrar tu cuenta desaparecen del servidor, de forma inmediata y sin copia:",
   "li": [
    "El identificador de la cuenta y su fecha de creación.",
-   "Tu nombre de club y el aspecto guardado de tu equipo.",
-   "Tu ELO y tus contadores de partidos jugados y ganados.",
+   "Tu alias, tu nombre de club y el aspecto guardado de tu equipo.",
+   "La bandera que hubieras elegido.",
+   "Tu ELO, tus contadores de partidos y tu palmarés de torneos.",
+   "Tu sitio en los cuadros de torneo que sigan en juego.",
    "Todos los aparatos vinculados y sus huellas.",
    "El registro de tu compra, si la hubiera."
   ],
@@ -289,7 +301,7 @@ export const ERASE = {
  },
  "keep": {
   "h": "6. Lo que no se conserva de todos modos",
-  "p": "No hace falta que pidas nada para esto, porque no existe: no guardamos direcciones IP, ni registros de conexión, ni las órdenes de tus partidas una vez terminadas, ni ningún dato de tu tarjeta. Y una cuenta que no se usa durante <strong>dos años se borra sola</strong>."
+  "p": "No hace falta que pidas nada para esto, porque no existe: no guardamos direcciones IP, ni registros de conexión, ni las órdenes de tus partidas una vez terminadas, ni ningún dato de tu tarjeta."
  },
  "help": {
   "h": "Escríbenos",
@@ -298,7 +310,7 @@ export const ERASE = {
 },
 "en": {
  "title": "Delete my GOALÉ data",
- "updated": "Last updated: 6 September 2026",
+ "updated": "Last updated: 7 September 2026",
  "intro": "This page explains how to delete your <strong>GOALÉ</strong> data. There are two places where data about you may exist, and they are deleted separately.",
  "s1": {
   "h": "1. What is on your device",
@@ -315,21 +327,23 @@ export const ERASE = {
  },
  "s3": {
   "h": "3. Deleting your account from the server",
-  "p": "If you have played online, an account exists holding your club name, your team's appearance, your ELO and your matches. To delete it, write to the address in the box from any email account with the subject <strong>\"Delete my account\"</strong> and include:",
+  "p": "If you have played online, an account exists holding your alias, your club name, your team's appearance, your ELO, your matches and your tournament record. To delete it, write to the address in the box from any email account with the subject <strong>\"Delete my account\"</strong> and include:",
   "li": [
+   "Your <strong>alias</strong>, the one you chose when you first entered online play.",
    "Your <strong>club name</strong>, exactly as it appears in MY TEAM.",
-   "Your <strong>account identifier</strong>, if you can see it: it is in Settings → Account, inside the game.",
    "The name of the device or devices you play from."
   ],
-  "p2": "The club name is enough in most cases; the identifier is only needed if two clubs happened to share a name. We may ask you to confirm from inside the game before deleting, so that nobody can delete someone else's account."
+  "p2": "Your alias and club name are enough to find you. We may ask you to confirm from inside the game before deleting, so that nobody can delete someone else's account."
  },
  "s4": {
   "h": "4. Exactly what gets deleted",
   "p": "Deleting your account removes from the server, immediately and with no copy kept:",
   "li": [
    "The account identifier and its creation date.",
-   "Your club name and your team's saved appearance.",
-   "Your ELO and your played/won counters.",
+   "Your alias, your club name and your team's saved appearance.",
+   "The flag you had chosen, if any.",
+   "Your ELO, your match counters and your tournament record.",
+   "Your seat in any tournament bracket still in play.",
    "Every linked device and its fingerprint.",
    "The record of your purchase, if there was one."
   ],
@@ -341,7 +355,7 @@ export const ERASE = {
  },
  "keep": {
   "h": "6. What is not kept in any case",
-  "p": "You do not need to ask for any of this, because it does not exist: we do not store IP addresses, connection logs, the orders from your matches once they are over, or any of your card details. And an account unused for <strong>two years deletes itself</strong>."
+  "p": "You do not need to ask for any of this, because it does not exist: we do not store IP addresses, connection logs, the orders from your matches once they are over, or any of your card details."
  },
  "help": {
   "h": "Write to us",
