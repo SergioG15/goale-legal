@@ -102,9 +102,11 @@ export function renderPrivacy(DATA) {
     `<h1>${t.title}</h1><p class="updated">${t.updated}</p>` +
     `<p>${withLinks(t.intro)}</p>` +
     `<h2>${t.sumH}</h2><ul>${t.sum.map((x) => `<li>${withLinks(x)}</li>`).join("")}</ul>` +
+    // `sGames` (02-10-2026) va entre s6 y s7: es la sección 7, los logros de
+    // Play Games; las claves s7-s10 son ahora las secciones 8-11.
     // `sOnline` va entre s2 y s3: es la sección 3 (modo Online), añadida el
     // 22-07 en el repo publicado y que faltaba en la copia del proyecto.
-    ["s1", "s2", "sOnline", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10"].map((k) => section(t[k])).join("") +
+    ["s1", "s2", "sOnline", "s3", "s4", "s5", "s6", "sGames", "s7", "s8", "s9", "s10"].map((k) => section(t[k])).join("") +
     contactBox(t.contact) +
     prevailsNote(ui);
   bindPicker();
