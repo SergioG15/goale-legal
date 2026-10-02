@@ -140,7 +140,7 @@ export const PRIVACY = {
  },
  "s4": {
   "h": "4. Jugar en varios aparatos y recuperar tu cuenta",
-  "p": "Puedes usar la misma cuenta en el móvil y en el ordenador. Para ello, el aparato que ya está dentro genera un <strong>código de ocho caracteres que caduca a los dos minutos</strong>, y el aparato nuevo lo teclea. El primero tiene que aceptar la petición. Esos códigos <strong>viven solo en la memoria del servidor</strong>, no se guardan en la base de datos y caducan también tras tres intentos fallidos.",
+  "p": "Puedes usar la misma cuenta en el móvil y en el ordenador. Para ello, el aparato que ya está dentro genera un <strong>código de ocho caracteres que caduca a los dos minutos</strong>, y el aparato nuevo lo teclea. El primero tiene que aceptar la petición. Esos códigos <strong>viven solo en la memoria del servidor</strong>, no se guardan en la base de datos, y hay un límite de intentos fallidos para que nadie pueda adivinarlos probando.",
   "p2": "<strong>Si pierdes tu aparato</strong>, puedes recuperar tu cuenta desde otro escribiendo tu correo: te llega un código y, al escribirlo, el aparato nuevo entra en tu cuenta con tu alias, tu ELO y tu palmarés. Desde la lista de aparatos puedes desvincular el que hayas perdido."
  },
  "s5": {
@@ -265,7 +265,7 @@ export const PRIVACY = {
  },
  "s4": {
   "h": "4. Playing on several devices and recovering your account",
-  "p": "You can use the same account on your phone and on your computer. To do that, the device that is already signed in generates an <strong>eight-character code that expires after two minutes</strong>, and the new device types it in. The first device has to approve the request. Those codes <strong>live only in the server's memory</strong>, are never written to the database, and also expire after three failed attempts.",
+  "p": "You can use the same account on your phone and on your computer. To do that, the device that is already signed in generates an <strong>eight-character code that expires after two minutes</strong>, and the new device types it in. The first device has to approve the request. Those codes <strong>live only in the server's memory</strong>, are never written to the database, and there is a limit on failed attempts so that nobody can guess them by trial.",
   "p2": "<strong>If you lose your device</strong>, you can recover your account from another one by entering your email: you receive a code and, once you enter it, the new device gets into your account with your alias, your ELO and your record. From the device list you can unlink the one you lost."
  },
  "s5": {
